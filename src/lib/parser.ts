@@ -26,8 +26,8 @@ export type ExpenseData = z.infer<typeof ExpenseSchema>;
 export type ParsedResult = { success: true; data: IncomeData | ExpenseData } | { success: false; error: string };
 
 // --- DICTIONARIES & REGEX ---
-const INCOME_KEYWORDS = ["recebi", "ganhei", "salário", "salario", "transferência", "pagamento", "freela"];
-const EXPENSE_KEYWORDS = ["gastei", "comprei", "paguei", "compra", "uber", "ifood", "gasolina"];
+const INCOME_KEYWORDS = ["recebi", "ganhei", "salário", "salario", "transferência", "pagamento", "freela", "receita"];
+const EXPENSE_KEYWORDS = ["gastei", "comprei", "paguei", "compra", "uber", "ifood", "gasolina", "custo", "pagar"];
 
 const CATEGORY_MAP: Record<string, string[]> = {
   "Alimentação": ["ifood", "mc", "bk", "hamburguer", "pizza", "mercado", "supermercado", "comida", "lanche", "padaria", "zeca", "restaurante"],
@@ -42,6 +42,7 @@ const PAYMENT_METHODS: Record<string, string[]> = {
   "Pix": ["pix"],
   "C6Bank": ["c6", "c6bank"],
   "NuBank": ["nubank", "nu", "roxinho", "cartão"], // Default to NuBank if 'cartão'
+  "Inter": ["inter", "banco inter", "laranjinha"],
 };
 
 // --- PARSER LOGIC ---

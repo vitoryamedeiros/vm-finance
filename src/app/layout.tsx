@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Anton } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const inter = Inter({
@@ -39,6 +40,7 @@ export default function RootLayout({
         className={`${inter.variable} ${anton.variable} font-sans antialiased selection:bg-primary selection:text-white`}
       >
         {children}
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );

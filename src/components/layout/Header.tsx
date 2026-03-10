@@ -13,7 +13,7 @@ export function Header() {
           <span className="sr-only">VM Finance</span>
         </Link>
         <nav className="flex items-center gap-6">
-          <Link href="/" className="font-heading uppercase text-lg hover:text-primary transition-colors">
+          <Link href="/dashboard" className="font-heading uppercase text-lg hover:text-primary transition-colors">
             Dashboard
           </Link>
           <div className="flex items-center justify-center w-12 h-12 border-4 border-foreground rounded-full hover:bg-primary hover:text-white transition-colors cursor-pointer">
