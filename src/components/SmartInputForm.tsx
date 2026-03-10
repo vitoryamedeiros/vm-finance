@@ -25,26 +25,25 @@ export function SmartInputForm() {
   }
 
   return (
-    <form ref={formRef} action={clientAction} className="relative mt-4 flex flex-col w-full max-w-3xl group">
+    <form ref={formRef} action={clientAction} className="relative mt-4 flex flex-col w-full group">
       <div className="relative flex items-center w-full">
         <Input 
           name="smartInput"
           placeholder="Ex: Gastei 150 de gasolina no cartão nubank" 
-          className="h-20 text-xl pl-6 pr-24 rounded-none disabled:opacity-50"
+          className="h-20 text-xl pl-6 pr-24 rounded-none border-4 border-black disabled:opacity-50 font-bold placeholder:text-black/30 placeholder:font-medium shadow-[4px_4px_0_0_rgba(0,0,0,0.1)] focus-visible:ring-0 focus-visible:border-primary transition-colors"
           autoComplete="off"
           disabled={isPending}
         />
         <Button 
           type="submit" 
           size="icon" 
-          variant="brutal" 
-          className="absolute right-3 top-3 h-14 w-14 shrink-0 p-0"
+          className="absolute right-3 top-2.5 h-14 w-15 shrink-0 p-0 rounded-none bg-primary text-white border-2 border-black shadow-[4px_4px_0_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all hover:shadow-none"
           disabled={isPending}
         >
           {isPending ? (
-            <Loader2 size={24} className="animate-spin -ml-1" />
+            <Loader2 size={24} className="animate-spin" />
           ) : (
-            <Send size={24} strokeWidth={2.5} className="-ml-1" />
+            <Send size={24} strokeWidth={3} />
           )}
         </Button>
       </div>

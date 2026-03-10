@@ -36,6 +36,7 @@ const CATEGORY_MAP: Record<string, string[]> = {
   "Autocuidado": ["farmácia", "remédio", "skincare", "cabelo", "barbearia", "salão", "shampoo", "creme"],
   "memimei": ["memimei", "presente", "roupa", "tênis", "sapato", "jogo", "ps5", "steam", "cinema", "ingresso", "show"],
   "Desnecessário": ["besteira", "doce", "sorvete", "açai", "chopp", "cerveja", "bar", "balada"],
+  "Gastos de Terceiros": ["terceiros", "remedio de bento", "aniv mae", "gasosa fev"],
 };
 
 const PAYMENT_METHODS: Record<string, string[]> = {
