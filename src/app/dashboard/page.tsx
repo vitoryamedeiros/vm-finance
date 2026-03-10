@@ -5,6 +5,8 @@ import { ArrowUpRight, ArrowDownRight, CreditCard, Wallet } from "lucide-react";
 import { supabase as sb } from "@/lib/supabase/client";
 import { generateInsights } from "@/lib/insights";
 
+export const dynamic = 'force-dynamic';
+
 export default async function DashboardPage() {
   
   const { data: incomesData } = await sb.from("incomes").select("*").order("date", { ascending: false });
